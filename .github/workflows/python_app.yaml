@@ -70,13 +70,13 @@ jobs:
     #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Lint with ruff
-      run: uv run ruff check
+      run: uvx ruff check
 
     # TODO: Add steps to run formatting steps and type checking
 
     - name: Check formatting with Ruff
-      run: uv run ruff format --check .
+      run: uvx ruff format --check .
 
     - name: Type check with mypy
-      run: uv run mypy .
+      run: uvx ty check 
 
