@@ -45,11 +45,14 @@ jobs:
       run: uv run python -m pytest
 
     - name: Lint with ruff
-      run: uvx ruff check 
+      run: uvx ruff check --fix
 
     - name: Check formatting with Ruff
-      run: uv run ruff format .
+      run: uv ruff format --check
 
-    - name: Type check with mypy
+    - name: Type check 
       run: uvx ty check 
+    
+    - name: Sort imports
+      run: uvx isort . --check
 
