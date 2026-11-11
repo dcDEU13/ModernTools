@@ -45,7 +45,7 @@ jobs:
       run: uv run python -m pytest
 
     - name: Lint with ruff
-      run: uvx ruff check --fix
+      run: uvx ruff check 
 
     - name: Check formatting with Ruff
       run: uvx ruff format --check .
