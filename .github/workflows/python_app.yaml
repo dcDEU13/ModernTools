@@ -70,7 +70,7 @@ jobs:
     #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Lint with ruff
-      run: uvx ruff check
+      run: uvx ruff check --fix
 
     # TODO: Add steps to run formatting steps and type checking
 
